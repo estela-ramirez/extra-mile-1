@@ -12,8 +12,9 @@ app.use(express.json({limit: '1mb'}));
 const PORT = process.env.PORT || 5000; // backend routing port
 
 if (process.env.NODE_ENV == "production") {
-    app.use(express.static(path.join(__dirname + '/build')));
-    
+    app.use(express.static('build'));
+
+
 }
 
 app.listen(PORT, () => {
